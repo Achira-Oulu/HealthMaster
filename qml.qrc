@@ -1,5 +1,13 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
+        <file>HomePage.qml</file>
+        <file>MenuIcon.qml</file>
+        <file>assets/bmi.png</file>
+        <file>assets/bottle.png</file>
+        <file>assets/heart.png</file>
+        <file>assets/lift.png</file>
+        <file>assets/run.png</file>
+        <file>assets/skipping.png</file>
     </qresource>
 </RCC>
