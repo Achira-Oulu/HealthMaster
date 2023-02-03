@@ -9,5 +9,6 @@
         <file>assets/lift.png</file>
         <file>assets/run.png</file>
         <file>assets/skipping.png</file>
+        <file>MenuName.qml</file>
     </qresource>
 </RCC>

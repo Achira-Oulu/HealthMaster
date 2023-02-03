@@ -11,12 +11,11 @@ Rectangle {
 
     Image
     {
-        width: parent.width * 0.55
+        width: parent.width * 0.5
         height: parent.height * 0.5
         anchors.centerIn: parent
         source: parent.buttonImageSource
 
     }
+
 }
-
-
