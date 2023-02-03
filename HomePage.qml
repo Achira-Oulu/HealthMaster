@@ -1,6 +1,14 @@
 import QtQuick 2.15
 
+
 Item {
+
+    property real inconScaleFactor: 0.28
+    property int leftMarginIcon: 40
+    property int leftMarginText: 50
+    property int topMarginText: 35
+
+
     Rectangle
     {
         id: background
@@ -41,31 +49,180 @@ Item {
 
         id: runningIcon
         buttonImageSource: "qrc:/assets/run.png"
-        anchors.centerIn: parent
-        width: parent.width * 0.3
+        //anchors.centerIn: parent
+        anchors
+        {
+            top: background.top
+            topMargin: 100
+            left: background.left
+            leftMargin: leftMarginIcon
+
+        }
+
+        width: parent.width * inconScaleFactor
 
         MenuName
         {
 
             id: runningName
-            anchors.centerIn: parent
-            width: MenuIcon.width * 01
-            height: MenuIcon.height * 01
-            text: qsTr("achira is the best")
+            anchors
+            {
+               top: runningIcon.top
+               topMargin: 35
+               left: runningIcon.right
+               leftMargin: leftMarginText
+               //verticallCenter: background.verticalCenter
+            }
+
+            width: parent.width * 01
+            height: parent.height * 01
+            font.pixelSize: 16
+            text: qsTr("Running")
 
         }
 
     }
 
+    MenuIcon
+    {
 
+        id: skippingIcon
+        buttonImageSource: "qrc:/assets/skipping.png"
+        anchors
+        {
+            top: runningIcon.bottom
+            topMargin :20
+            left: background.left
+            leftMargin: leftMarginIcon
 
-//    MenuIcon
-//    {
-//        id: skippingIcon
-//        buttonImageSource: "qrc:/assets/skipping.png"
-//        anchors.centerIn: parent
-//        width: parent.width * 0.3
-//    }
+            //horizontalCenter: parent.horizontalCenter
+        }
 
+        width: parent.width * inconScaleFactor
+
+        MenuName
+        {
+            id: skippingName
+            anchors
+            {
+                top: skippingIcon.top
+                topMargin: topMarginText
+                left: skippingIcon.right
+                leftMargin: leftMarginText
+
+            }
+
+            width: parent.width * 01
+            height: parent.height * 01
+            font.pixelSize: 16
+            text: qsTr("Skipping")
+
+        }
+    }
+
+    MenuIcon
+    {
+
+        id: liftingIcon
+        buttonImageSource: "qrc:/assets/lift.png"
+        anchors
+        {
+            top: skippingIcon.bottom
+            topMargin :20
+            left: background.left
+            leftMargin: leftMarginIcon
+           // horizontalCenter: parent.horizontalCenter
+        }
+
+        width: parent.width * inconScaleFactor
+
+        MenuName
+        {
+            id: liftingName
+            anchors
+            {
+                top: liftingIcon.top
+                topMargin: topMarginText
+                left: liftingIcon.right
+                leftMargin: leftMarginText
+            }
+
+            width: parent.width * 01
+            height: parent.height * 01
+            font.pixelSize: 16
+            text: qsTr("Lifting")
+
+        }
+    }
+
+    MenuIcon
+    {
+
+        id: heartIcon
+        buttonImageSource: "qrc:/assets/heart.png"
+        anchors
+        {
+            top: liftingIcon.bottom
+            topMargin :20
+            left: background.left
+            leftMargin: leftMarginIcon
+           // horizontalCenter: parent.horizontalCenter
+        }
+
+        width: parent.width * inconScaleFactor
+
+        MenuName
+        {
+            id: heartName
+            anchors
+            {
+                top: heartIcon.top
+                topMargin: topMarginText
+                left: heartIcon.right
+                leftMargin: leftMarginText
+            }
+
+            width: parent.width * 01
+            height: parent.height * 01
+            font.pixelSize: 16
+            text: qsTr("Heart Rate")
+
+        }
+    }
+
+    MenuIcon
+    {
+
+        id: bmiIcon
+        buttonImageSource: "qrc:/assets/bmi.png"
+        anchors
+        {
+            top: heartIcon.bottom
+            topMargin :20
+            left: background.left
+            leftMargin: leftMarginIcon
+           // horizontalCenter: parent.horizontalCenter
+        }
+
+        width: parent.width * inconScaleFactor
+
+        MenuName
+        {
+            id: bmiName
+            anchors
+            {
+                top: bmiIcon.top
+                topMargin: topMarginText
+                left: bmiIcon.right
+                leftMargin: leftMarginText
+            }
+
+            width: parent.width * 01
+            height: parent.height * 01
+            font.pixelSize: 16
+            text: qsTr("Check BMI")
+
+        }
+    }
 
 }
