@@ -43,12 +43,12 @@ Item
 
         TextField {
             id: textField
-            x: 81
-            y: 301
-            width: 229
-            height: 43
+            x: 106
+            y: 295
+            width: 180
+            height: 35
             horizontalAlignment: Text.AlignHCenter
-            font.pointSize: 20
+            font.pointSize: 16
 
             placeholderText: qsTr("Text Field")
         }
@@ -66,10 +66,10 @@ Item
 
         TextField {
             id: textField1
-            x: 81
+            x: 106
             y: 414
-            width: 229
-            height: 43
+            width: 180
+            height: 35
             horizontalAlignment: Text.AlignHCenter
             placeholderText: qsTr("Text Field")
             font.pointSize: 20
