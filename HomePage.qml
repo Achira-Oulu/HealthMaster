@@ -44,6 +44,33 @@ Item {
         }
     }
 
+    BottomDeck
+    {
+        id: bottomBar
+    }
+    Image
+    {
+        id: menuButton
+        width: parent.width/12
+        height: width
+        source: "qrc:/assets/menu.png"
+        anchors
+        {
+            bottom: parent.bottom
+            bottomMargin: 20
+            left: parent.left
+            leftMargin: 20
+        }
+
+        MouseArea
+        {
+            anchors.fill: parent
+            onClicked: stackView.pop()
+        }
+    }
+
+
+
     MenuIcon
     {
 
@@ -80,6 +107,8 @@ Item {
             text: qsTr("Running")
 
         }
+
+        onButtonClicked: stackView.push("qrc:/RunningPage.qml")
 
     }
 
@@ -223,6 +252,8 @@ Item {
             text: qsTr("Check BMI")
 
         }
+
+        onButtonClicked: stackView.push("qrc:/BmiPage.qml")
     }
 
 }

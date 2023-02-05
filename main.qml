@@ -12,6 +12,7 @@ Window {
     {
         id: stackView
         anchors.fill: parent
-        initialItem: "HomePage.qml"
+//        initialItem: "HomePage.qml"
+        initialItem: "qrc:/WelcomePage.qml"
     }
 }

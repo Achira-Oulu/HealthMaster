@@ -10,5 +10,13 @@
         <file>assets/run.png</file>
         <file>assets/skipping.png</file>
         <file>MenuName.qml</file>
+        <file>BottomDeck.qml</file>
+        <file>assets/home.png</file>
+        <file>assets/menu.png</file>
+        <file>RunningPage.qml</file>
+        <file>BmiPage.qml</file>
+        <file>assets/running.gif</file>
+        <file>assets/running2.gif</file>
+        <file>WelcomePage.qml</file>
     </qresource>
 </RCC>
