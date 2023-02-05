@@ -18,6 +18,7 @@ class TimerClass : public QObject
         void timeTicker();
         void pauseTimer();
         void resumeTimer();
+        void resetTimer();
 
     signals:
         void timeDisplayChanged();

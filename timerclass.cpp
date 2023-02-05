@@ -66,3 +66,8 @@ void TimerClass::resumeTimer()
 {
     m_timer ->start();
 }
+void TimerClass::resetTimer()
+{
+    setTimeDisplay( "00:00" );
+    m_timer ->stop();
+}

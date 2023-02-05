@@ -3,6 +3,9 @@ import Achira 1.0
 import QtQuick.Controls 6.3
 
 Item {
+    width: 390
+    height: 844
+
 
         TimerClass
         {
@@ -46,35 +49,50 @@ Item {
                 //                verticalCenter: parent.verticalCenter
             }
 
-            Button {
-                id: button2
-                x: 26
-                y: 139
-                width: 120
-                height: 42
-                text: qsTr("Resume Workout")
-                onClicked:
-                {
-                    timerClass.resumeTimer();
-                }
-            }
-
-
-
-
         }
 
         Button {
+            id: button2
+            x: 31
+            y: 302
+            width: 120
+            height: 42
+            text: qsTr("Resume Workout")
+            onClicked:
+            {
+                timerClass.resumeTimer();
+                runningBoy.paused = false;
+            }
+        }
+
+        Button
+        {
             id: button1
-            x: 100
-            y: 139
+            x: 232
+            y: 302
             width: 120
             height: 42
             text: qsTr("Pause Workout")
             onClicked:
-        {
-            timerClass.pauseTimer();
+            {
+                timerClass.pauseTimer();
+                runningBoy.paused = true;
+            }
+
         }
+
+        Button
+        {
+            id: resetButton
+            x: 232
+            y: 367
+            width: 120
+            height: 42
+            text: qsTr("reset")
+            onClicked:
+            {
+                timerClass.resetTimer();
+            }
 
         }
 
