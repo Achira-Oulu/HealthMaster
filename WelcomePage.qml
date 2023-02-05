@@ -2,6 +2,8 @@ import QtQuick 2.15
 import QtQuick.Controls 6.3
 
 Item {
+    width: 390
+    height: 844
 
     property real inconScaleFactor: 0.28
     property int leftMarginIcon: 40
@@ -27,70 +29,74 @@ Item {
             }
         }
 
-        Text {
-            id: text1
-            width: 79
-            height: 43
-            text: qsTr("Health Master")
-            anchors.top: parent.top
-            font.pixelSize: 21
-            horizontalAlignment: Text.AlignHCenter
-            font.styleName: "Bold Italic"
-            font.family: "Arial"
-            rotation: 0
-            anchors.topMargin: 64
-            anchors.horizontalCenter: parent.horizontalCenter
-        }
-
-
-        MenuIcon
-        {
-
-            id: runningIcon
-            buttonImageSource: "qrc:/assets/run.png"
-            anchors.centerIn: parent
-            height: 80
-//          width: 20
-            radius: 25
-            width: parent.width * inconScaleFactor
-
-            MenuName
-            {
-
-                id: runningName
-                anchors
-                {
-                   top: runningIcon.top
-                   topMargin: 35
-                   left: runningIcon.right
-                   leftMargin: leftMarginText
-                   //verticallCenter: background.verticalCenter
-                }
-
-                width: parent.width * 01
-                height: parent.height * 01
-                font.pixelSize: 16
-                text: qsTr("Running")
-
-            }
-
-            onButtonClicked: stackView.push("qrc:/HomePage.qml")
-
-        }
 
         Button {
             id: button
-            x: 253
-            y: 316
+            x: 128
+            y: 535
             width: 135
             height: 48
-            text: qsTr("get starteed")
+            text: qsTr("Get Started!")
 
 
             onClicked: stackView.push("qrc:/HomePage.qml")
 
 
 
+        }
+
+        Text {
+            id: text1
+            x: 105
+            y: 90
+            width: 180
+            height: 50
+            text: qsTr("Health Master")
+            font.pixelSize: 30
+            horizontalAlignment: Text.AlignHCenter
+            style: Text.Normal
+            font.underline: false
+            font.strikeout: false
+            font.family: "Tahoma"
+            font.italic: false
+            font.bold: true
+        }
+
+        Text {
+            id: text2
+            x: 91
+            y: 134
+            width: 152
+            height: 53
+            text: qsTr("Version 1.0")
+            font.pixelSize: 15
+            font.italic: true
+        }
+
+        Image
+        {
+            id: mainIcon
+            width: parent.width/2
+            height: width
+            source: "qrc:/assets/welcomeheart.png"
+            anchors.horizontalCenterOffset: 0
+            anchors.verticalCenterOffset: -74
+
+
+            anchors.centerIn: parent
+
+        }
+
+        Text {
+            id: text3
+            x: 71
+            y: 470
+            width: 247
+            height: 26
+            text: qsTr("Be keen to live long!")
+            font.pixelSize: 15
+            horizontalAlignment: Text.AlignHCenter
+            font.italic: true
         }
 
 

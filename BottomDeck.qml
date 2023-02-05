@@ -9,7 +9,7 @@ Rectangle
         right: parent.right
         bottom: parent.bottom
     }
-    height: parent.height / 15
+    height: parent.height / 11
     radius: 10
     color: "#999999"
     border.color: "#af0a0d0a"

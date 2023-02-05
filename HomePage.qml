@@ -2,18 +2,25 @@ import QtQuick 2.15
 
 
 Item {
+// setting dimesntions of the phone screen
+    width: 390
+    height: 844
 
-    property real inconScaleFactor: 0.28
-    property int leftMarginIcon: 40
-    property int leftMarginText: 50
-    property int topMarginText: 35
+
+// Tuning parameters for the scale and position of icons & text
+    property real inconScaleFactor: 0.25
+    property int leftMarginIcon: 45
+    property int leftMarginText: 55
+    property int topMarginText: 40
+    property int topMarginIcon: 140
+
 
 
     Rectangle
     {
+
+
         id: background
-        width: 390
-        height: 844
         anchors.fill: parent
         gradient: Gradient {
             orientation: Gradient.Vertical
@@ -30,30 +37,29 @@ Item {
 
         Text {
             id: text1
-            width: 79
-            height: 43
-            text: qsTr("Health Master")
-            anchors.top: parent.top
-            font.pixelSize: 21
-            horizontalAlignment: Text.AlignHCenter
-            font.styleName: "Bold Italic"
-            font.family: "Arial"
-            rotation: 0
-            anchors.topMargin: 64
-            anchors.horizontalCenter: parent.horizontalCenter
+            x: 38
+            y: 27
+            width: 314
+            height: 48
+            text: qsTr("Main Menu")
+            font.pixelSize: 25
+            font.italic: true
+            font.bold: true
+        }
+
+        BottomDeck
+        {
+            id: bottomDeck
         }
     }
 
-    BottomDeck
-    {
-        id: bottomBar
-    }
+
     Image
     {
-        id: menuButton
-        width: parent.width/12
+        id: backButton2
+        width: parent.width/10
         height: width
-        source: "qrc:/assets/menu.png"
+        source: "qrc:/assets/back.png"
         anchors
         {
             bottom: parent.bottom
@@ -80,7 +86,7 @@ Item {
         anchors
         {
             top: background.top
-            topMargin: 100
+            topMargin: topMarginIcon
             left: background.left
             leftMargin: leftMarginIcon
 

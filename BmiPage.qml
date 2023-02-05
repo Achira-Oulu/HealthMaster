@@ -1,20 +1,18 @@
 import QtQuick 2.15
 import Achira 1.0
+import QtQuick.Controls 6.3
 
 Item {
-
-//        TimerClass
-//        {
-//            id: timerClass
-//        }
+    width: 390
+    height: 844
 
         Rectangle
         {
             id: background
-            width: 390
-            height: 844
+
             anchors.fill: parent
-            gradient: Gradient {
+            gradient: Gradient
+            {
                 orientation: Gradient.Vertical
                 GradientStop {
                     position: 0
@@ -26,39 +24,87 @@ Item {
                     color: "#264a02"
                 }
             }
+
+            Text {
+                id: text1
+                x: 38
+                y: 27
+                width: 314
+                height: 48
+                text: qsTr("BMI Menu")
+                font.pixelSize: 25
+                font.italic: true
+                font.bold: true
+            }
+
+            Text {
+                id: text2
+                x: 38
+                y: 215
+                width: 314
+                height: 40
+                text: qsTr("Select your gender")
+                font.pixelSize: 20
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+            Button {
+                id: button
+                x: 74
+                y: 318
+                width: 242
+                height: 39
+                text: qsTr("Male")
+
+                onClicked: stackView.push("qrc:/BmiCalcMale.qml")
+            }
+
+            Button {
+                id: button1
+                x: 74
+                y: 403
+                width: 242
+                height: 39
+                text: qsTr("Female")
+
+                onClicked: stackView.push("qrc:/BmiCalcFemale.qml")
+            }
+
+            Button {
+                id: button2
+                x: 74
+                y: 481
+                width: 242
+                height: 39
+                text: qsTr("I'd rather not say")
+            }
         }
         BottomDeck
         {
             id: bottomDeck
         }
+
         Image
         {
-            id: menuButton
-            width: parent.width/12
+            id: backButton
+            width: parent.width/10
             height: width
-            source: "qrc:/assets/menu.png"
+            source: "qrc:/assets/back.png"
             anchors
             {
                 bottom: parent.bottom
                 bottomMargin: 20
-                left: parent.leftr
+                left: parent.left
                 leftMargin: 20
             }
-        MouseArea
-        {
-            anchors.fill: parent
-            onClicked: stackView.pop()
+
+            MouseArea
+            {
+                anchors.fill: parent
+                onClicked: stackView.pop()
+            }
         }
-//        Text {
-//            id: elapsedTime
-//            anchors
-//            {
 
-//            }
-
-//            text: qsTr("text" + timerClass.timeDisplay)
-//        }
-    }
 
 
 }

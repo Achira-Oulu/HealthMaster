@@ -18,5 +18,9 @@
         <file>assets/running.gif</file>
         <file>assets/running2.gif</file>
         <file>WelcomePage.qml</file>
+        <file>BmiCalcMale.qml</file>
+        <file>BmiCalcFemale.qml</file>
+        <file>assets/back.png</file>
+        <file>assets/welcomeheart.png</file>
     </qresource>
 </RCC>
